@@ -13,7 +13,7 @@ import { RiWhatsappLine } from "react-icons/ri";
 import { IoMdCall } from "react-icons/io";
 import { MdAttachEmail } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import preview2wanted from "../assets/2wanted.png"
 import previewSolanotes from '../assets/Solanotes.png'
 import previewEnvioSeguro1 from '../assets/EnvíoSeguro1.jpeg'
@@ -25,7 +25,7 @@ function MainPage() {
 
   function handleCV() {
 
-    /* window.location.href = "https://docs.google.com/document/d/1jzZ3hIfQmq53F6S6Rr33wKSPow6554_KB74def8BT24/export?format=pdf"; */
+    window.location.href = "https://docs.google.com/document/d/1jzZ3hIfQmq53F6S6Rr33wKSPow6554_KB74def8BT24/export?format=pdf";
     
     setDownloadCV('Downloaded');
     
