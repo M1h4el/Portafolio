@@ -47,6 +47,10 @@ p {
   padding: 0;
 }
 
+.firstHr {
+  margin: 80px 0;
+}
+
 .ButtonDiv {
   gap: 8%;
   display: flex;
@@ -97,7 +101,7 @@ p {
 
 .ContainerSkills {
   flex-direction: column;
-  margin: 10% 0;
+  margin: 0;
   display: flex;
 }
 
@@ -147,6 +151,10 @@ p {
   font-weight: bolder;
 }
 
+.list p {
+  color: white;
+}
+
 
 .infoProy > .boxPort1 > .list {
   display: flex;
@@ -191,6 +199,23 @@ p {
   width: auto;
 }
 
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logos {
+  display: flex;
+  width: 50px;
+  height: 50px;
+}
+
+.softLogo {
+  display: flex;
+  width: 35.75px;
+  height: 35.75px;
+}
 
 .infoProy > .boxPort2 > .ul1 > .list,
 .infoProy > .boxPort2 > .ul2 > .list {
