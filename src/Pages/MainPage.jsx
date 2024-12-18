@@ -21,6 +21,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { useState } from "react";
+// import { useState } from "react";
 import previewIMGConverter from "../assets/IMGConverter.png"
 import preview2wanted from "../assets/2wanted.png";
 import previewSolanotes from "../assets/Solanotes.png";
@@ -54,7 +55,7 @@ function MainPage() {
     if (window.innerWidth <= 1200) {
       distance = 9999;
     } else if (window.innerWidth > 1200) {
-      distance = 900;
+      distance = 1300;
     }
 
     window.scrollTo({
@@ -113,7 +114,7 @@ function MainPage() {
       <container className="ContainerSkills">
         <div className="TextSkills">Skills</div>
         <div className="GridSkills">
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#f06529" }}>
               <div className="Logo">
                 <FaHtml5 />
@@ -121,7 +122,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>HTML</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#2965f1" }}>
               <div className="Logo">
                 <IoLogoCss3 />
@@ -129,7 +130,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>CSS</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#f0db4f" }}>
               <div className="Logo">
                 <SiJavascript />
@@ -137,7 +138,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>JavaScript</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#1976D2" }}>
               <div className="Logo">
               <SiTypescript />
@@ -146,7 +147,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>TypeScript</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#61dafb" }}>
               <div className="Logo">
                 <FaReact />
@@ -154,7 +155,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>React.Js</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#FF5252" }}>
               <div className="Logo">
                 <FaAngular />
@@ -162,7 +163,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>Angular</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#FF5252" }}>
               <div className="Logo">
                 <img className="logos" src={urlExpo} alt="Expo Logo" />
@@ -170,7 +171,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>Expo</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#3c873a" }}>
               <div className="Logo">
                 <FaNode />
@@ -178,7 +179,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>Node.Js</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#000000" }}>
               <div className="Logo">
                 <SiExpress />
@@ -186,7 +187,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>Express</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#f01716" }}>
               <div className="Logo">
                 <SiNestjs />
@@ -194,7 +195,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>Nest</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "black" }}>
               <div className="Logo">
                 <SiNextdotjs />
@@ -202,7 +203,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>Next</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "black" }}>
               <div className="Logo">
                 <img className="logos" src={urlCsharp} alt="Csharp Logo" />
@@ -210,7 +211,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>C#</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "black" }}>
               <div className="Logo">
                 <img className="logos" src={urlDotNet} alt=".NET Logo"/>
@@ -218,7 +219,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>.NET</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#00758f" }}>
               <div className="Logo">
                 <img className="logos" src={urlSQLserver} alt="SQLserver Logo" />
@@ -226,7 +227,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>SQL Server</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#00758f" }}>
               <div className="Logo">
                 <GrMysql />
@@ -234,7 +235,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>MySQL</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#32648D" }}>
               <div className="Logo">
                 <BiLogoPostgresql />
@@ -242,7 +243,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>PostgreSQL</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#4DB33D" }}>
               <div className="Logo">
                 <BiLogoMongodb />
@@ -250,7 +251,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>MongoDB</p>
           </div>
-          <div>
+          <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "#4DB33D" }}>
               <div className="Logo">
                 <img className="logos" src={urlFirebase} alt="Firebase Logo" />
@@ -258,7 +259,7 @@ function MainPage() {
             </IconContext.Provider>
             <p>Firebase</p>
           </div>
-          <div>
+          <div className="skillsContainer">
           <IconContext.Provider value={{ size: 50, color: "black" }}>
               <div className="Logo">
                 <FaGithub />
@@ -268,6 +269,8 @@ function MainPage() {
           </div>
         </div>
       </container>
+
+      <hr className="secondHr" />
 
       <container className="infoProy">
         <div className="boxPort2">
@@ -309,42 +312,6 @@ function MainPage() {
                 </IconContext.Provider>
               </div>
             </div>
-
-            <div className="list">
-              <div className="contPreview">
-                <div className="preview">
-                  <img src={previewSolanotes} alt="" className="image"></img>
-                </div>
-              </div>
-
-              <p className="description">
-                Solanotes is a web application designed with user registration
-                and powered with CRUD, using relational databases.
-              </p>
-
-              <div className="iconList">
-                <IconContext.Provider value={{ size: 35, color: "#61dafb" }}>
-                  <div className="Logo">
-                    <FaReact />
-                  </div>
-                </IconContext.Provider>
-
-                <IconContext.Provider value={{ size: 35, color: "#3c873a" }}>
-                  <div className="Logo">
-                    <FaNode />
-                  </div>
-                </IconContext.Provider>
-
-                <IconContext.Provider value={{ size: 35, color: "#00758f" }}>
-                  <div className="Logo">
-                    <GrMysql />
-                  </div>
-                </IconContext.Provider>
-              </div>
-            </div>
-          </div>
-
-          <div className="ul2">
             <div className="list">
               <div className="contPreview">
                 <div
@@ -371,6 +338,42 @@ function MainPage() {
               </p>
 
               <div className="iconList">
+                <IconContext.Provider value={{ size: 35, color: "#3c873a" }}>
+                  <div className="Logo">
+                    <FaNode />
+                  </div>
+                </IconContext.Provider>
+
+                <IconContext.Provider value={{ size: 35, color: "#00758f" }}>
+                  <div className="Logo">
+                    <GrMysql />
+                  </div>
+                </IconContext.Provider>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="ul2">
+            <div className="list">
+              <div className="contPreview">
+                <div className="preview">
+                  <img src={previewSolanotes} alt="" className="image"></img>
+                </div>
+              </div>
+
+              <p className="description">
+                Solanotes is a web application designed with user registration
+                and powered with CRUD, using relational databases.
+              </p>
+
+              <div className="iconList">
+                <IconContext.Provider value={{ size: 35, color: "#61dafb" }}>
+                  <div className="Logo">
+                    <FaReact />
+                  </div>
+                </IconContext.Provider>
+
                 <IconContext.Provider value={{ size: 35, color: "#3c873a" }}>
                   <div className="Logo">
                     <FaNode />

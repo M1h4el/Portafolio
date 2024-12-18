@@ -51,6 +51,11 @@ p {
   margin: 80px 0;
 }
 
+.secondHr{
+  opacity: 0;
+  margin: 80px 0;
+}
+
 .ButtonDiv {
   gap: 8%;
   display: flex;
@@ -100,33 +105,52 @@ p {
 }
 
 .ContainerSkills {
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin: 0;
   display: flex;
+  height: 100%;
+  min-width: 1200px
 }
 
 .GridSkills {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 5%;
-  flex-wrap: wrap ;
-  margin: 0 10%;
+  flex-wrap: wrap;
+  max-width: 100%;
+  width: 1200px;
+  height: 100%;
+}
+
+.skillsContainer{
+  width: 140px;
+  padding: 0;
+  border-radius: 8px;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.skillsContainer:hover {
+  transform: scale(1.2);
+  animation: skillZoom 0.5s ease forwards;
 }
 
 .GridSkills div {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 .GridSkills p {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  color: #b5b0b0;
 }
 
 .TextSkills {
   font-size: 3rem;
   font-weight: bolder;
   margin: 4%;
+  margin-bottom: 80px;
 }
 
 .infoProy {
@@ -164,13 +188,13 @@ p {
 .infoProy > .boxPort1 > .list > p {
   margin-left: 1rem;
   font-family: "Roboto", sans-serif;
-  color: #b5b0b0;
+  color: rgb(72, 72, 72);
 }
 
 .infoProy > .boxPort1 > .list > a {
   margin-left: 1rem;
   font-family: "Roboto", sans-serif;
-  color: #b5b0b0;
+  color: rgb(72, 72, 72);
   cursor: pointer;
 }
 
@@ -271,8 +295,8 @@ p {
   margin: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 92%;
+  height: 100%;
 }
 
 .infoProy > .boxPort2 > .ul1 > .list > .contPreview > .preview > .image,
@@ -306,6 +330,17 @@ p {
     margin-top: 15%;
     width: 40%;
   }
+  .ContainerSkills {
+  min-width: 768px;
+  }
+
+  .GridSkills{
+    width: 570px;
+  }
+
+  .skillsContainer{
+    width: 106px;
+  }
 
 }
 
@@ -313,6 +348,8 @@ p {
   .ul1,
   .ul2{
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .infoProy > .boxPort2 > .ul1 > .list,
@@ -338,6 +375,14 @@ p {
 
   .ContainerPresentation p {
     margin: 0 20%
+  }
+
+  .GridSkills{
+    width: 318px;
+  }
+
+  .ContainerSkills{
+    min-width: 318px
   }
 
 }

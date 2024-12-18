@@ -2,6 +2,7 @@
   max-width: 1280px;
   margin: 5% auto;
   text-align: center;
+  
 }
 
 @media only screen and (max-width: 768px ) {
@@ -24,10 +25,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+  color: rgb(222, 222, 222);
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color ease 0.5s;
 }
+
 button:hover {
-  border-color: #646cff;
+  background-color: rgb(126, 126, 126);
+  color: #1a1a1a;
 }
