@@ -1,4 +1,4 @@
-import "./Styles/MainPage.css";
+import "./Styles/MainPage.scss";
 import { FaHtml5 } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io";
 import { SiJavascript } from "react-icons/si";
@@ -70,387 +70,389 @@ function MainPage() {
 
   return (
     <>
-      <container className="ContainerPresentation">
-        <p>Hi, I'm</p>
+      <div className="gradient">
+        <container className="ContainerPresentation">
+          <p>Hi, I'm</p>
 
-        <div className="PresentationName">MIGUEL</div>
+          <div className="PresentationName">MIGUEL</div>
 
-        <div className="PresentationName">SOLANO</div>
+          <div className="PresentationName">SOLANO</div>
 
-        <p>Full Stack developer, passionate about JavaScript frameworks.</p>
+          <p>Full Stack developer, passionate about JavaScript frameworks.</p>
 
-        <div className="ButtonDiv">
-          <button className="downloadCV" onClick={handleCV}>
-            <span
-              className={
-                downloadCV === "Downloaded"
-                  ? "downloadText selected"
-                  : "downloadText"
-              }
-            >
-              {downloadCV}
-            </span>
+          <div className="ButtonDiv">
+            <button className="downloadCV" onClick={handleCV}>
+              <span
+                className={
+                  downloadCV === "Downloaded"
+                    ? "downloadText selected"
+                    : "downloadText"
+                }
+              >
+                {downloadCV}
+              </span>
 
-            <IconContext.Provider value={{ size: 20 }}>
-              <div style={{ marginTop: 4 }}>
-                <FaFileDownload />
-              </div>
-            </IconContext.Provider>
-          </button>
+              <IconContext.Provider value={{ size: 20 }}>
+                <div style={{ marginTop: 4 }}>
+                  <FaFileDownload />
+                </div>
+              </IconContext.Provider>
+            </button>
 
-          <button className="downloadCV" onClick={handleContact}>
-            <span className="downloadText">Contact me</span>
-            <IconContext.Provider value={{ size: 20 }}>
-              <div style={{ marginTop: 4 }}>
-                <GrContact />
-              </div>
-            </IconContext.Provider>
-          </button>
-        </div>
-      </container>
+            <button className="downloadCV" onClick={handleContact}>
+              <span className="downloadText">Contact me</span>
+              <IconContext.Provider value={{ size: 20 }}>
+                <div style={{ marginTop: 4 }}>
+                  <GrContact />
+                </div>
+              </IconContext.Provider>
+            </button>
+          </div>
+        </container>
 
-      <hr className="firstHr" />
+        <hr className="firstHr" />
 
-      <container className="ContainerSkills">
-        <div className="TextSkills">Skills</div>
-        <div className="GridSkills">
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#f06529" }}>
-              <div className="Logo">
-                <FaHtml5 />
-              </div>
-            </IconContext.Provider>
-            <p>HTML</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#2965f1" }}>
-              <div className="Logo">
-                <IoLogoCss3 />
-              </div>
-            </IconContext.Provider>
-            <p>CSS</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#f0db4f" }}>
-              <div className="Logo">
-                <SiJavascript />
-              </div>
-            </IconContext.Provider>
-            <p>JavaScript</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#1976D2" }}>
-              <div className="Logo">
-              <SiTypescript />
+        <container className="ContainerSkills">
+          <div className="TextSkills">Skills</div>
+          <div className="GridSkills">
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#f06529" }}>
+                <div className="Logo">
+                  <FaHtml5 />
+                </div>
+              </IconContext.Provider>
+              <p>HTML</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#2965f1" }}>
+                <div className="Logo">
+                  <IoLogoCss3 />
+                </div>
+              </IconContext.Provider>
+              <p>CSS</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#f0db4f" }}>
+                <div className="Logo">
+                  <SiJavascript />
+                </div>
+              </IconContext.Provider>
+              <p>JavaScript</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#1976D2" }}>
+                <div className="Logo">
+                <SiTypescript />
 
-              </div>
-            </IconContext.Provider>
-            <p>TypeScript</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#61dafb" }}>
-              <div className="Logo">
-                <FaReact />
-              </div>
-            </IconContext.Provider>
-            <p>React.Js</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#FF5252" }}>
-              <div className="Logo">
-                <FaAngular />
-              </div>
-            </IconContext.Provider>
-            <p>Angular</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#FF5252" }}>
-              <div className="Logo">
-                <img className="logos" src={urlExpo} alt="Expo Logo" />
-              </div>
-            </IconContext.Provider>
-            <p>Expo</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#3c873a" }}>
-              <div className="Logo">
-                <FaNode />
-              </div>
-            </IconContext.Provider>
-            <p>Node.Js</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#000000" }}>
-              <div className="Logo">
-                <SiExpress />
-              </div>
-            </IconContext.Provider>
-            <p>Express</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#f01716" }}>
-              <div className="Logo">
-                <SiNestjs />
-              </div>
-            </IconContext.Provider>
-            <p>Nest</p>
-          </div>
-          <div className="skillsContainer">
+                </div>
+              </IconContext.Provider>
+              <p>TypeScript</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#61dafb" }}>
+                <div className="Logo">
+                  <FaReact />
+                </div>
+              </IconContext.Provider>
+              <p>React.Js</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#FF5252" }}>
+                <div className="Logo">
+                  <FaAngular />
+                </div>
+              </IconContext.Provider>
+              <p>Angular</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#FF5252" }}>
+                <div className="Logo">
+                  <img className="logos" src={urlExpo} alt="Expo Logo" />
+                </div>
+              </IconContext.Provider>
+              <p>Expo</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#3c873a" }}>
+                <div className="Logo">
+                  <FaNode />
+                </div>
+              </IconContext.Provider>
+              <p>Node.Js</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#000000" }}>
+                <div className="Logo">
+                  <SiExpress />
+                </div>
+              </IconContext.Provider>
+              <p>Express</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#f01716" }}>
+                <div className="Logo">
+                  <SiNestjs />
+                </div>
+              </IconContext.Provider>
+              <p>Nest</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "black" }}>
+                <div className="Logo">
+                  <SiNextdotjs />
+                </div>
+              </IconContext.Provider>
+              <p>Next</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "black" }}>
+                <div className="Logo">
+                  <img className="logos" src={urlCsharp} alt="Csharp Logo" />
+                </div>
+              </IconContext.Provider>
+              <p>C#</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "black" }}>
+                <div className="Logo">
+                  <img className="logos" src={urlDotNet} alt=".NET Logo"/>
+                </div>
+              </IconContext.Provider>
+              <p>.NET</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#00758f" }}>
+                <div className="Logo">
+                  <img className="logos" src={urlSQLserver} alt="SQLserver Logo" />
+                </div>
+              </IconContext.Provider>
+              <p>SQL Server</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#00758f" }}>
+                <div className="Logo">
+                  <GrMysql />
+                </div>
+              </IconContext.Provider>
+              <p>MySQL</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#32648D" }}>
+                <div className="Logo">
+                  <BiLogoPostgresql />
+                </div>
+              </IconContext.Provider>
+              <p>PostgreSQL</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#4DB33D" }}>
+                <div className="Logo">
+                  <BiLogoMongodb />
+                </div>
+              </IconContext.Provider>
+              <p>MongoDB</p>
+            </div>
+            <div className="skillsContainer">
+              <IconContext.Provider value={{ size: 50, color: "#4DB33D" }}>
+                <div className="Logo">
+                  <img className="logos" src={urlFirebase} alt="Firebase Logo" />
+                </div>
+              </IconContext.Provider>
+              <p>Firebase</p>
+            </div>
+            <div className="skillsContainer">
             <IconContext.Provider value={{ size: 50, color: "black" }}>
-              <div className="Logo">
-                <SiNextdotjs />
-              </div>
-            </IconContext.Provider>
-            <p>Next</p>
+                <div className="Logo">
+                  <FaGithub />
+                </div>
+              </IconContext.Provider>
+              <p>Github</p>
+            </div>
           </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "black" }}>
-              <div className="Logo">
-                <img className="logos" src={urlCsharp} alt="Csharp Logo" />
-              </div>
-            </IconContext.Provider>
-            <p>C#</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "black" }}>
-              <div className="Logo">
-                <img className="logos" src={urlDotNet} alt=".NET Logo"/>
-              </div>
-            </IconContext.Provider>
-            <p>.NET</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#00758f" }}>
-              <div className="Logo">
-                <img className="logos" src={urlSQLserver} alt="SQLserver Logo" />
-              </div>
-            </IconContext.Provider>
-            <p>SQL Server</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#00758f" }}>
-              <div className="Logo">
-                <GrMysql />
-              </div>
-            </IconContext.Provider>
-            <p>MySQL</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#32648D" }}>
-              <div className="Logo">
-                <BiLogoPostgresql />
-              </div>
-            </IconContext.Provider>
-            <p>PostgreSQL</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#4DB33D" }}>
-              <div className="Logo">
-                <BiLogoMongodb />
-              </div>
-            </IconContext.Provider>
-            <p>MongoDB</p>
-          </div>
-          <div className="skillsContainer">
-            <IconContext.Provider value={{ size: 50, color: "#4DB33D" }}>
-              <div className="Logo">
-                <img className="logos" src={urlFirebase} alt="Firebase Logo" />
-              </div>
-            </IconContext.Provider>
-            <p>Firebase</p>
-          </div>
-          <div className="skillsContainer">
-          <IconContext.Provider value={{ size: 50, color: "black" }}>
-              <div className="Logo">
-                <FaGithub />
-              </div>
-            </IconContext.Provider>
-            <p>Github</p>
-          </div>
-        </div>
-      </container>
+        </container>
 
-      <hr className="secondHr" />
+        <hr className="secondHr" />
 
-      <container className="infoProy">
-        <div className="boxPort2">
-          <div className="title">Projects</div>
+        <container className="infoProy">
+          <div className="boxPort2">
+            <div className="title">Projects</div>
 
-          <hr />
+            <hr />
 
-          <div className="ul1">
-            <div className="list">
-              <div className="contPreview">
-                <div className="preview">
-                  <img src={preview2wanted} alt="" className="image"></img>
+            <div className="ul1">
+              <div className="list">
+                <div className="contPreview">
+                  <div className="preview">
+                    <img src={preview2wanted} alt="" className="image"></img>
+                  </div>
+                </div>
+
+                <p className="description">
+                  2wanted is an app where users can create pyramid schemes in
+                  rooms with customized prices and invite each other to earn
+                  money, this app works with a Bitcoin wallet.
+                </p>
+
+                <div className="iconList">
+                  <IconContext.Provider value={{ size: 35, color: "#61dafb" }}>
+                    <div className="Logo">
+                      <FaReact />
+                    </div>
+                  </IconContext.Provider>
+
+                  <IconContext.Provider value={{ size: 35, color: "#3c873a" }}>
+                    <div className="Logo">
+                      <FaNode />
+                    </div>
+                  </IconContext.Provider>
+
+                  <IconContext.Provider value={{ size: 35, color: "#4DB33D" }}>
+                    <div className="Logo">
+                      <BiLogoMongodb />
+                    </div>
+                  </IconContext.Provider>
+                </div>
+              </div>
+              <div className="list">
+                <div className="contPreview">
+                  <div
+                    className="preview"
+                    style={{ justifyContent: "space-around" }}
+                  >
+                    <img
+                      src={previewEnvioSeguro1}
+                      alt=""
+                      className="image2"
+                    ></img>
+                    <img
+                      src={previewEnvioSeguro2}
+                      alt=""
+                      className="image2"
+                    ></img>
+                  </div>
+                </div>
+
+                <p className="description">
+                  Envíoseguro is a WhatsApp chatbot that promotes safety and
+                  management of purchases using payment gateways and methods to
+                  ensure the shipment of products.
+                </p>
+
+                <div className="iconList">
+                  <IconContext.Provider value={{ size: 35, color: "#3c873a" }}>
+                    <div className="Logo">
+                      <FaNode />
+                    </div>
+                  </IconContext.Provider>
+
+                  <IconContext.Provider value={{ size: 35, color: "#00758f" }}>
+                    <div className="Logo">
+                      <GrMysql />
+                    </div>
+                  </IconContext.Provider>
                 </div>
               </div>
 
-              <p className="description">
-                2wanted is an app where users can create pyramid schemes in
-                rooms with customized prices and invite each other to earn
-                money, this app works with a Bitcoin wallet.
-              </p>
-
-              <div className="iconList">
-                <IconContext.Provider value={{ size: 35, color: "#61dafb" }}>
-                  <div className="Logo">
-                    <FaReact />
-                  </div>
-                </IconContext.Provider>
-
-                <IconContext.Provider value={{ size: 35, color: "#3c873a" }}>
-                  <div className="Logo">
-                    <FaNode />
-                  </div>
-                </IconContext.Provider>
-
-                <IconContext.Provider value={{ size: 35, color: "#4DB33D" }}>
-                  <div className="Logo">
-                    <BiLogoMongodb />
-                  </div>
-                </IconContext.Provider>
-              </div>
             </div>
-            <div className="list">
-              <div className="contPreview">
-                <div
-                  className="preview"
-                  style={{ justifyContent: "space-around" }}
-                >
-                  <img
-                    src={previewEnvioSeguro1}
-                    alt=""
-                    className="image2"
-                  ></img>
-                  <img
-                    src={previewEnvioSeguro2}
-                    alt=""
-                    className="image2"
-                  ></img>
+
+            <div className="ul2">
+              <div className="list">
+                <div className="contPreview">
+                  <div className="preview">
+                    <img src={previewSolanotes} alt="" className="image"></img>
+                  </div>
+                </div>
+
+                <p className="description">
+                  Solanotes is a web application designed with user registration
+                  and powered with CRUD, using relational databases.
+                </p>
+
+                <div className="iconList">
+                  <IconContext.Provider value={{ size: 35, color: "#61dafb" }}>
+                    <div className="Logo">
+                      <FaReact />
+                    </div>
+                  </IconContext.Provider>
+
+                  <IconContext.Provider value={{ size: 35, color: "#3c873a" }}>
+                    <div className="Logo">
+                      <FaNode />
+                    </div>
+                  </IconContext.Provider>
+
+                  <IconContext.Provider value={{ size: 35, color: "#00758f" }}>
+                    <div className="Logo">
+                      <GrMysql />
+                    </div>
+                  </IconContext.Provider>
                 </div>
               </div>
 
-              <p className="description">
-                Envíoseguro is a WhatsApp chatbot that promotes safety and
-                management of purchases using payment gateways and methods to
-                ensure the shipment of products.
-              </p>
-
-              <div className="iconList">
-                <IconContext.Provider value={{ size: 35, color: "#3c873a" }}>
-                  <div className="Logo">
-                    <FaNode />
+              <div className="list">
+                <div className="contPreview">
+                  <div className="preview">
+                    <img src={previewIMGConverter} alt="IMGConverter Preview" className="image"></img>
                   </div>
-                </IconContext.Provider>
+                </div>
 
-                <IconContext.Provider value={{ size: 35, color: "#00758f" }}>
-                  <div className="Logo">
-                    <GrMysql />
-                  </div>
-                </IconContext.Provider>
+                <p className="description">
+                IMGConverter is a SPA (Single Page Application). Using Google Vision API (Google Cloud Console) as an OCR tool, it processes text in images and finally creates an .xlsx file with the organized information.
+                </p>
+
+                <div className="iconList">
+                  <IconContext.Provider value={{ size: 35, color: "#61dafb" }}>
+                    <div className="Logo">
+                      <FaReact />
+                    </div>
+                  </IconContext.Provider>
+
+                  <IconContext.Provider value={{ size: 35, color: "#00758f" }}>
+                    <div className="Logo">
+                    <img className="softLogo" src={urlFirebase} alt="Firebase Logo" />
+                    </div>
+                  </IconContext.Provider>
+                </div>
+
               </div>
             </div>
-
           </div>
 
-          <div className="ul2">
-            <div className="list">
-              <div className="contPreview">
-                <div className="preview">
-                  <img src={previewSolanotes} alt="" className="image"></img>
-                </div>
+          <div className="boxPort1">
+            <div className="title">Info</div>
+
+            <hr />
+
+            <IconContext.Provider value={{ size: 25 }}>
+              <div className="list">
+                <RiWhatsappLine />
+                <p>+57 3001967613</p>
               </div>
+            </IconContext.Provider>
 
-              <p className="description">
-                Solanotes is a web application designed with user registration
-                and powered with CRUD, using relational databases.
-              </p>
-
-              <div className="iconList">
-                <IconContext.Provider value={{ size: 35, color: "#61dafb" }}>
-                  <div className="Logo">
-                    <FaReact />
-                  </div>
-                </IconContext.Provider>
-
-                <IconContext.Provider value={{ size: 35, color: "#3c873a" }}>
-                  <div className="Logo">
-                    <FaNode />
-                  </div>
-                </IconContext.Provider>
-
-                <IconContext.Provider value={{ size: 35, color: "#00758f" }}>
-                  <div className="Logo">
-                    <GrMysql />
-                  </div>
-                </IconContext.Provider>
+            <IconContext.Provider value={{ size: 25 }}>
+              <div className="list">
+                <IoMdCall />
+                <p>+57 3001967613</p>
               </div>
-            </div>
+            </IconContext.Provider>
 
-            <div className="list">
-              <div className="contPreview">
-                <div className="preview">
-                  <img src={previewIMGConverter} alt="IMGConverter Preview" className="image"></img>
-                </div>
+            <IconContext.Provider value={{ size: 25 }}>
+              <div className="list">
+                <MdAttachEmail />
+                <p>solanomaciasmihael@gmail.com</p>
               </div>
+            </IconContext.Provider>
 
-              <p className="description">
-              IMGConverter is a SPA (Single Page Application). Using Google Vision API (Google Cloud Console) as an OCR tool, it processes text in images and finally creates an .xlsx file with the organized information.
-              </p>
-
-              <div className="iconList">
-                <IconContext.Provider value={{ size: 35, color: "#61dafb" }}>
-                  <div className="Logo">
-                    <FaReact />
-                  </div>
-                </IconContext.Provider>
-
-                <IconContext.Provider value={{ size: 35, color: "#00758f" }}>
-                  <div className="Logo">
-                  <img className="softLogo" src={urlFirebase} alt="Firebase Logo" />
-                  </div>
-                </IconContext.Provider>
+            <IconContext.Provider value={{ size: 25 }}>
+              <div className="list" onClick={handleGit}>
+                <IoLogoGithub />
+                <a className="linkGit">M1h4el</a>
               </div>
-
-            </div>
+            </IconContext.Provider>
           </div>
-        </div>
-
-        <div className="boxPort1">
-          <div className="title">Info</div>
-
-          <hr />
-
-          <IconContext.Provider value={{ size: 25 }}>
-            <div className="list">
-              <RiWhatsappLine />
-              <p>+57 3001967613</p>
-            </div>
-          </IconContext.Provider>
-
-          <IconContext.Provider value={{ size: 25 }}>
-            <div className="list">
-              <IoMdCall />
-              <p>+57 3001967613</p>
-            </div>
-          </IconContext.Provider>
-
-          <IconContext.Provider value={{ size: 25 }}>
-            <div className="list">
-              <MdAttachEmail />
-              <p>solanomaciasmihael@gmail.com</p>
-            </div>
-          </IconContext.Provider>
-
-          <IconContext.Provider value={{ size: 25 }}>
-            <div className="list" onClick={handleGit}>
-              <IoLogoGithub />
-              <a className="linkGit">M1h4el</a>
-            </div>
-          </IconContext.Provider>
-        </div>
-      </container>
+        </container>
+      </div>
     </>
   );
 }
