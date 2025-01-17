@@ -64,7 +64,7 @@ function MainPage() {
 
   return (
     <>
-      <MouseGradient />;
+      <MouseGradient />
       <div className="gradient">
         <container className="ContainerPresentation">
           <p>Hi, I'm</p>
