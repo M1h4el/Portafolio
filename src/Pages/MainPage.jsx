@@ -3,6 +3,8 @@ import "./Styles/MainPage.scss";
 import IconWrapperSkills from "../Components/Icons/IconWrapperSkills";
 import IconWrapperCards from "../Components/Icons/IconWrapperCards";
 import SkillComponent from "../Components/SkillComponent";
+import IconInfo from "../Components/Icons/IconInfo";
+import MouseGradient from "../Components/MouseGradient.jsx";
 
 // skillIcons
 import { IconContext } from "react-icons";
@@ -27,6 +29,8 @@ import previewEnvioSeguro1 from "../assets/EnvíoSeguro1.jpeg";
 import previewEnvioSeguro2 from "../assets/EnvíoSeguro2.jpeg";
 
 function MainPage() {
+  
+
   const [downloadCV, setDownloadCV] = useState("Download");
 
   const urlFirebase =
@@ -60,6 +64,7 @@ function MainPage() {
 
   return (
     <>
+      <MouseGradient />;
       <div className="gradient">
         <container className="ContainerPresentation">
           <p>Hi, I'm</p>
@@ -220,11 +225,10 @@ function MainPage() {
                 </p>
 
                 <div className="iconList">
-                <IconWrapperCards color="#61dafb">
+                  <IconWrapperCards color="#61dafb">
                     <FaReact />
-                </IconWrapperCards>
-                <IconWrapperCards imgSrc={urlFirebase} />
-                  
+                  </IconWrapperCards>
+                  <IconWrapperCards imgSrc={urlFirebase} />
                 </div>
               </div>
             </div>
@@ -235,26 +239,17 @@ function MainPage() {
 
             <hr />
 
-            <IconContext.Provider value={{ size: 25 }}>
-              <div className="list">
-                <RiWhatsappLine />
-                <p>+57 3001967613</p>
-              </div>
-            </IconContext.Provider>
+            <IconInfo label="+57 3001967613">
+              <RiWhatsappLine />
+            </IconInfo>
 
-            <IconContext.Provider value={{ size: 25 }}>
-              <div className="list">
-                <IoMdCall />
-                <p>+57 3001967613</p>
-              </div>
-            </IconContext.Provider>
+            <IconInfo label="+57 3001967613">
+              <IoMdCall />
+            </IconInfo>
 
-            <IconContext.Provider value={{ size: 25 }}>
-              <div className="list">
-                <MdAttachEmail />
-                <p>solanomaciasmihael@gmail.com</p>
-              </div>
-            </IconContext.Provider>
+            <IconInfo label="solanomaciasmihael@gmail.com">
+              <MdAttachEmail />
+            </IconInfo>
 
             <IconContext.Provider value={{ size: 25 }}>
               <div className="list" onClick={handleGit}>
