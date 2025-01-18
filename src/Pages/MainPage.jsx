@@ -100,7 +100,6 @@ function MainPage() {
           </div>
         </container>
 
-        <hr className="firstHr" />
 
         <container className="ContainerSkills">
           <div className="TextSkills">Skills</div>

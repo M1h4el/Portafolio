@@ -63,10 +63,8 @@ $marginHr: 80px 0;
 // Styles
 body {
   font-family: $font-family;
-  place-content: center;
   margin: 0;
-  height: 100vh;
-  transition: background 0.5s ease;
+  height: 1120px;
   --mouse-x: 50%;
   --mouse-y: 50%;
   --gradient-radius: 3000px;
@@ -107,7 +105,7 @@ body {
   .ButtonDiv {
     @include flexCenter(null, center, null);
     gap: 8%;
-    margin-top: 4%;
+    margin-top: 70px;
 
     .downloadCV {
       @include flexCenter(null, center, center);
@@ -192,7 +190,7 @@ body {
   .TextSkills {
     font-size: 3rem;
     font-weight: bolder;
-    margin: 4%;
+    margin: 90px;
     margin-bottom: 80px;
   }
 
@@ -354,7 +352,7 @@ body {
   height: 50px;
 }
 
-
+//----------------------------------- Media Queries -----------------------------------//
 
 @media only screen and (max-width: 1200px) {
   .infoProy {
@@ -421,5 +419,9 @@ body {
 
   .ContainerSkills {
     min-width: 318px;
+  }
+
+  body {
+    height: 914px ;
   }
 }
