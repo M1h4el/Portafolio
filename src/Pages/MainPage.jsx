@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Styles/MainPage.scss";
 import IconWrapperSkills from "../Components/Icons/IconWrapperSkills";
 import IconWrapperCards from "../Components/Icons/IconWrapperCards";
-import SkillComponent from "../Components/SkillComponent";
+import RevealSkills from '../Components/ScrollReveal.jsx'
 import IconInfo from "../Components/Icons/IconInfo";
 import MouseGradient from "../Components/MouseGradient.jsx";
 
@@ -104,7 +104,7 @@ function MainPage() {
         <container className="ContainerSkills">
           <div className="TextSkills">Skills</div>
           <div className="GridSkills">
-            <SkillComponent />
+            <RevealSkills />
           </div>
         </container>
         </section>

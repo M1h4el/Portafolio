@@ -1,49 +1,4 @@
-/* @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .gradient {
-    --size: 750px;
-    --speed: 50s;
-    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
-    z-index: -1;
-  
-    width: var(--size);
-    height: var(--size);
-    filter: blur(calc(var(--size) / 5));
-    background-image: linear-gradient(hsl(222, 84%, 60%), hsl(164, 79%, 71%));
-    animation: rotate var(--speed) var(--easing) alternate infinite;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  }
-  
-  @media (min-width: 720px) {
-    .gradient {
-      --size: 500px;
-    }
-  }
-  
-  body {
-    background-color: #071c39;
-    position: absolute;
-    inset: 0;
-    display: flex;
-    place-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  * {
-    transition: all 0.5s ease-out;
-  } */
-
-// Variables
-//$secondary-color $primary-color
 $primary-color: rgba(255, 255, 255, 0.87);
 $secondary-color: rgb(119, 119, 119) 0%;
 $background-color: #071c39;
@@ -211,6 +166,18 @@ body {
     max-width: 1123px;
     width: 70%;
     height: 100%;
+    
+    .reveal-container {
+      @extend .GridSkills;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
     p {
       font-family: "Roboto", sans-serif;
@@ -224,12 +191,14 @@ body {
       transform: scale(1);
       transition: transform 0.5s ease;
 
+      &:hover {
+        transform: scale(1.2);
+        animation: skillZoom 0.5s ease forwards;
+      }
+      }
+
     }
 
-    .skillsContainer:hover {
-      transform: scale(1.2);
-      animation: skillZoom 0.5s ease forwards;
-    }
   }
 }
 

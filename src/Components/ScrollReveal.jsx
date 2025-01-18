@@ -1,27 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import '../Pages/Styles/MainPage.scss';
+import SkillComponent from "../Components/SkillComponent";
 
 const ScrollReveal = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      if (scrollPosition > 100 && !isVisible) { // Ajusta el valor para cuando quieras que se active
-        setIsVisible(true);
-      }
-    };
+    const timer = setTimeout(() => {
+      setIsVisible(true); // Mostrar el componente después de 0.4 segundos
+    }, 400); // 400ms = 0.4s
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isVisible]);
+    return () => clearTimeout(timer); // Limpiar el temporizador si el componente se desmonta
+  }, []);
 
   return (
     <div className={`reveal-container ${isVisible ? 'visible' : ''}`}>
-      <h1>Hola, me estoy deslizando hacia arriba 🚀</h1>
+      <SkillComponent />
     </div>
   );
 };
