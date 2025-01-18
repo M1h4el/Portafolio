@@ -66,198 +66,200 @@ function MainPage() {
     <>
       <MouseGradient />
       <div className="gradient">
-        <container className="ContainerPresentation">
-          <p>Hi, I'm</p>
+        <section className="section1">
 
-          <div className="PresentationName">MIGUEL</div>
+          <container className="ContainerPresentation">
+            <p>Hi, I'm</p>
 
-          <div className="PresentationName">SOLANO</div>
+            <div className="PresentationName">MIGUEL</div>
 
-          <p>Full Stack developer, passionate about JavaScript frameworks.</p>
+            <div className="PresentationName">SOLANO</div>
 
-          <div className="ButtonDiv">
-            <button className="downloadCV" onClick={handleCV}>
-              <span
-                className={
-                  downloadCV === "Downloaded"
-                    ? "downloadText selected"
-                    : "downloadText"
-                }
-              >
-                {downloadCV}
-              </span>
-              <IconWrapperSkills>
-                <FaFileDownload />
-              </IconWrapperSkills>
-            </button>
+            <p>Full Stack developer, passionate about JavaScript frameworks.</p>
 
-            <button className="downloadCV" onClick={handleContact}>
-              <span className="downloadText">Contact me</span>
-              <IconWrapperSkills>
-                <GrContact />
-              </IconWrapperSkills>
-            </button>
-          </div>
-        </container>
+            <div className="ButtonDiv">
+              <button className="downloadCV" onClick={handleCV}>
+                <span
+                  className={
+                    downloadCV === "Downloaded"
+                      ? "downloadText selected"
+                      : "downloadText"
+                  }
+                >
+                  {downloadCV}
+                </span>
+                <IconWrapperSkills>
+                  <FaFileDownload />
+                </IconWrapperSkills>
+              </button>
 
-
+              <button className="downloadCV" onClick={handleContact}>
+                <span className="downloadText">Contact me</span>
+                <IconWrapperSkills>
+                  <GrContact />
+                </IconWrapperSkills>
+              </button>
+            </div>
+          </container>
         <container className="ContainerSkills">
           <div className="TextSkills">Skills</div>
           <div className="GridSkills">
             <SkillComponent />
           </div>
         </container>
+        </section>
+        
+        <section className="section2">
 
-        <hr className="secondHr" />
+          <container className="infoProy">
+            <div className="boxPort2">
+              <div className="title">Projects</div>
 
-        <container className="infoProy">
-          <div className="boxPort2">
-            <div className="title">Projects</div>
+              <hr />
 
-            <hr />
+              <div className="ul1">
+                <div className="list">
+                  <div className="contPreview">
+                    <div className="preview">
+                      <img src={preview2wanted} alt="" className="image"></img>
+                    </div>
+                  </div>
 
-            <div className="ul1">
-              <div className="list">
-                <div className="contPreview">
-                  <div className="preview">
-                    <img src={preview2wanted} alt="" className="image"></img>
+                  <p className="description">
+                    2wanted is an app where users can create pyramid schemes in
+                    rooms with customized prices and invite each other to earn
+                    money, this app works with a Bitcoin wallet.
+                  </p>
+
+                  <div className="iconList">
+                    <IconWrapperCards color="#61dafb">
+                      <FaReact />
+                    </IconWrapperCards>
+                    <IconWrapperCards color="#3c873a">
+                      <FaNode />
+                    </IconWrapperCards>
+                    <IconWrapperCards color="#3c873a">
+                      <BiLogoMongodb />
+                    </IconWrapperCards>
                   </div>
                 </div>
+                <div className="list">
+                  <div className="contPreview">
+                    <div
+                      className="preview"
+                      style={{ justifyContent: "space-around" }}
+                    >
+                      <img
+                        src={previewEnvioSeguro1}
+                        alt=""
+                        className="image2"
+                      ></img>
+                      <img
+                        src={previewEnvioSeguro2}
+                        alt=""
+                        className="image2"
+                      ></img>
+                    </div>
+                  </div>
 
-                <p className="description">
-                  2wanted is an app where users can create pyramid schemes in
-                  rooms with customized prices and invite each other to earn
-                  money, this app works with a Bitcoin wallet.
-                </p>
+                  <p className="description">
+                    Envíoseguro is a WhatsApp chatbot that promotes safety and
+                    management of purchases using payment gateways and methods to
+                    ensure the shipment of products.
+                  </p>
 
-                <div className="iconList">
-                  <IconWrapperCards color="#61dafb">
-                    <FaReact />
-                  </IconWrapperCards>
-                  <IconWrapperCards color="#3c873a">
-                    <FaNode />
-                  </IconWrapperCards>
-                  <IconWrapperCards color="#3c873a">
-                    <BiLogoMongodb />
-                  </IconWrapperCards>
+                  <div className="iconList">
+                    <IconWrapperCards color="#3c873a">
+                      <FaNode />
+                    </IconWrapperCards>
+                    <IconWrapperCards color="#00758f">
+                      <GrMysql />
+                    </IconWrapperCards>
+                  </div>
                 </div>
               </div>
-              <div className="list">
-                <div className="contPreview">
-                  <div
-                    className="preview"
-                    style={{ justifyContent: "space-around" }}
-                  >
-                    <img
-                      src={previewEnvioSeguro1}
-                      alt=""
-                      className="image2"
-                    ></img>
-                    <img
-                      src={previewEnvioSeguro2}
-                      alt=""
-                      className="image2"
-                    ></img>
+
+              <div className="ul2">
+                <div className="list">
+                  <div className="contPreview">
+                    <div className="preview">
+                      <img src={previewSolanotes} alt="" className="image"></img>
+                    </div>
+                  </div>
+
+                  <p className="description">
+                    Solanotes is a web application designed with user registration
+                    and powered with CRUD, using relational databases.
+                  </p>
+
+                  <div className="iconList">
+                    <IconWrapperCards color="#61dafb">
+                      <FaReact />
+                    </IconWrapperCards>
+                    <IconWrapperCards color="#3c873a">
+                      <FaNode />
+                    </IconWrapperCards>
+
+                    <IconWrapperCards color="#00758f">
+                      <GrMysql />
+                    </IconWrapperCards>
                   </div>
                 </div>
 
-                <p className="description">
-                  Envíoseguro is a WhatsApp chatbot that promotes safety and
-                  management of purchases using payment gateways and methods to
-                  ensure the shipment of products.
-                </p>
+                <div className="list">
+                  <div className="contPreview">
+                    <div className="preview">
+                      <img
+                        src={previewIMGConverter}
+                        alt="IMGConverter Preview"
+                        className="image"
+                      ></img>
+                    </div>
+                  </div>
 
-                <div className="iconList">
-                  <IconWrapperCards color="#3c873a">
-                    <FaNode />
-                  </IconWrapperCards>
-                  <IconWrapperCards color="#00758f">
-                    <GrMysql />
-                  </IconWrapperCards>
+                  <p className="description">
+                    IMGConverter is a SPA (Single Page Application). Using Google
+                    Vision API (Google Cloud Console) as an OCR tool, it processes
+                    text in images and finally creates an .xlsx file with the
+                    organized information.
+                  </p>
+
+                  <div className="iconList">
+                    <IconWrapperCards color="#61dafb">
+                      <FaReact />
+                    </IconWrapperCards>
+                    <IconWrapperCards imgSrc={urlFirebase} />
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="ul2">
-              <div className="list">
-                <div className="contPreview">
-                  <div className="preview">
-                    <img src={previewSolanotes} alt="" className="image"></img>
-                  </div>
+            <div className="boxPort1">
+              <div className="title">Info</div>
+
+              <hr />
+
+              <IconInfo label="+57 3001967613">
+                <RiWhatsappLine />
+              </IconInfo>
+
+              <IconInfo label="+57 3001967613">
+                <IoMdCall />
+              </IconInfo>
+
+              <IconInfo label="solanomaciasmihael@gmail.com">
+                <MdAttachEmail />
+              </IconInfo>
+
+              <IconContext.Provider value={{ size: 25 }}>
+                <div className="list" onClick={handleGit}>
+                  <IoLogoGithub />
+                  <a className="linkGit">M1h4el</a>
                 </div>
-
-                <p className="description">
-                  Solanotes is a web application designed with user registration
-                  and powered with CRUD, using relational databases.
-                </p>
-
-                <div className="iconList">
-                  <IconWrapperCards color="#61dafb">
-                    <FaReact />
-                  </IconWrapperCards>
-                  <IconWrapperCards color="#3c873a">
-                    <FaNode />
-                  </IconWrapperCards>
-
-                  <IconWrapperCards color="#00758f">
-                    <GrMysql />
-                  </IconWrapperCards>
-                </div>
-              </div>
-
-              <div className="list">
-                <div className="contPreview">
-                  <div className="preview">
-                    <img
-                      src={previewIMGConverter}
-                      alt="IMGConverter Preview"
-                      className="image"
-                    ></img>
-                  </div>
-                </div>
-
-                <p className="description">
-                  IMGConverter is a SPA (Single Page Application). Using Google
-                  Vision API (Google Cloud Console) as an OCR tool, it processes
-                  text in images and finally creates an .xlsx file with the
-                  organized information.
-                </p>
-
-                <div className="iconList">
-                  <IconWrapperCards color="#61dafb">
-                    <FaReact />
-                  </IconWrapperCards>
-                  <IconWrapperCards imgSrc={urlFirebase} />
-                </div>
-              </div>
+              </IconContext.Provider>
             </div>
-          </div>
-
-          <div className="boxPort1">
-            <div className="title">Info</div>
-
-            <hr />
-
-            <IconInfo label="+57 3001967613">
-              <RiWhatsappLine />
-            </IconInfo>
-
-            <IconInfo label="+57 3001967613">
-              <IoMdCall />
-            </IconInfo>
-
-            <IconInfo label="solanomaciasmihael@gmail.com">
-              <MdAttachEmail />
-            </IconInfo>
-
-            <IconContext.Provider value={{ size: 25 }}>
-              <div className="list" onClick={handleGit}>
-                <IoLogoGithub />
-                <a className="linkGit">M1h4el</a>
-              </div>
-            </IconContext.Provider>
-          </div>
-        </container>
+          </container>
+        </section>
       </div>
     </>
   );

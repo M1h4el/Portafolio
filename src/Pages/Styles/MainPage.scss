@@ -64,7 +64,8 @@ $marginHr: 80px 0;
 body {
   font-family: $font-family;
   margin: 0;
-  height: 1120px;
+  height: 1140px;
+  width: 100vw;
   --mouse-x: 50%;
   --mouse-y: 50%;
   --gradient-radius: 3000px;
@@ -81,57 +82,68 @@ body {
 
 }
 
-.ContainerPresentation {
-  p {
-    @include flexCenter(null, center, center);
-    flex-wrap: wrap;
-    margin: 0;
-    z-index: 0;
-    padding: 0;
-  }
+.gradient {
 
-  .PresentationName {
-    @include flexCenter(row, center, center);
-    font-size: $font-size-large;
-    font-weight: bolder;
-    height: 100px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: rainbow 10s linear infinite;
-    animation-timing-function: ease;
-  }
+  width: 100vw;
+  height: auto;
 
-  .ButtonDiv {
-    @include flexCenter(null, center, null);
-    gap: 8%;
+  .section1 {
+    @include flexCenter(column, null, center);
     margin-top: 70px;
-
-    .downloadCV {
-      @include flexCenter(null, center, center);
-      gap: 14%;
-      padding: 2%;
-      width: 20%;
-
-      .selected {
-        animation: slideIn 0.5s ease;
-        animation: slideOut 0.5s ease;
-        animation-delay: slideOut 0.3s;
+    margin-bottom: 150px;
+    width: 100vw;
+    
+    .ContainerPresentation {
+      p {
+        @include flexCenter(null, center, center);
+        flex-wrap: wrap;
+        margin: 0;
+        z-index: 0;
+        padding: 0;
       }
-
-      .downloadText {
-        font-size: 1rem;
+    
+      .PresentationName {
+        @include flexCenter(null, center, center);
+        font-size: $font-size-large;
+        font-weight: bolder;
+        height: 100px;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: rainbow 10s linear infinite;
+        animation-timing-function: ease;
+      }
+    
+      .ButtonDiv {
+        @include flexCenter(null, center, null);
+        gap: 8%;
+        margin-top: 70px;
+    
+        .downloadCV {
+          @include flexCenter(null, center, center);
+          gap: 14%;
+          padding: 2%;
+          width: 220px;
+          height: 80px;
+    
+          .selected {
+            animation: slideIn 0.5s ease;
+            animation: slideOut 0.5s ease;
+            animation-delay: slideOut 0.3s;
+          }
+    
+          .downloadText {
+            font-size: 1rem;
+          }
+        }
       }
     }
   }
 }
 
-.firstHr {
-  margin: $marginHr;
-}
 
-.secondHr {
-  opacity: 0;
+
+.firstHr {
   margin: $marginHr;
 }
 
@@ -183,22 +195,21 @@ body {
 
 .ContainerSkills {
   @include flexCenter(column, center, center);
-  margin: 0;
-  height: 100%;
-  min-width: 1200px;
+  margin-top: 115px;
+  height: auto;
+  width: 100%;
 
   .TextSkills {
     font-size: 3rem;
     font-weight: bolder;
-    margin: 90px;
-    margin-bottom: 80px;
+    margin: 50px 0;
   }
 
   .GridSkills {
-    @include flexCenter(row, center, center);
+    @include flexCenter(null, center, center);
     flex-wrap: wrap;
-    max-width: 100%;
-    width: 1200px;
+    max-width: 1123px;
+    width: 70%;
     height: 100%;
 
     p {
@@ -226,121 +237,125 @@ body {
     margin-top: 1rem;
   } */
 
-.infoProy {
-  @include flexCenter(row, space-between, null);
+.section2 {
+  @include flexCenter(column, null, center);
+  flex: 1;
+  width: 100vw;
 
-  .boxPort2 {
-    width: 70%;
-    height: auto;
-
+  .infoProy {
+    @include flexCenter(null, center, flex-start);
+    width: 100vw;
     hr {
       width: 90%;
-      margin-bottom: 10%;
+      margin-bottom: 75px;
     }
 
-    .ul1,
-    .ul2 {
-      @include flexCenter(row, space-between, null);
-      margin-bottom: 10%;
-
-      .list {
-        @include flexCenter(column, null, null);
-        height: 465px;
-        width: 300px;
-        margin: 0px 50px;
-        border-radius: 8px;
-        background-color: #1f1f1f;
-        transition: transform 0.3s ease;
-
-        p {
-          color: white;
-          margin: 10px 20px;
-          text-align: justify;
-        }
-
-        .contPreview {
-          @include flexCenter(null, center, center);
-          border-radius: 10px;
-          margin: 10px;
-          height: 190px;
-          background: rgb(70, 69, 69);
-
-          .preview {
-            @include flexCenter(null, center, null);
+    .boxPort2 {
+      @include flexCenter(column, null, center);
+      width: 70%;
+      height: auto;
+  
+      .ul1,
+      .ul2 {
+        @include flexCenter(null, space-evenly, null);
+        margin-bottom: 80px;
+        width: 95%;
+        
+        .list {
+          @include flexCenter(column, null, null);
+          height: 465px;
+          width: 300px;
+          margin: 0px 50px;
+          border-radius: 8px;
+          background-color: #1f1f1f;
+          transition: transform 0.3s ease;
+  
+          p {
+            color: white;
+            margin: 10px 20px;
+            text-align: justify;
+          }
+  
+          .contPreview {
+            @include flexCenter(null, center, center);
             border-radius: 10px;
             margin: 10px;
-            width: 92%;
-            height: 100%;
-
-            .image {
-              width: 104%;
-              height: 100%auto;
-              border-radius: 8px;
-            }
-
-            .image2 {
+            height: 190px;
+            background: rgb(70, 69, 69);
+  
+            .preview {
+              @include flexCenter(null, center, null);
+              border-radius: 10px;
+              margin: 10px;
+              width: 92%;
               height: 100%;
-              width: 33%;
-              border-radius: 8px;
+  
+              .image {
+                width: 104%;
+                height: auto;
+                border-radius: 8px;
+              }
+  
+              .image2 {
+                height: 100%;
+                width: 33%;
+                border-radius: 8px;
+              }
             }
           }
         }
-      }
-
-      .list:hover,
-      .list:hover {
-        transform: scale(1.05);
-      }
-    }
-  }
-
-  .title {
-    @include flexCenter(row, center, null);
-    font-size: 3rem;
-    font-weight: bolder;
-  }
-
-  .boxPort1 {
-    @include flexCenter(column, flex-start, left);
-    width: 30%;
-
-    .list {
-      display: flex;
-      margin-top: 10%;
-
-      p {
-        margin-left: 1rem;
-        font-family: "Roboto", sans-serif;
-        color: rgb(72, 72, 72);
-        margin: 0 1rem;
-      }
-
-      a {
-        margin-left: 1rem;
-        font-family: "Roboto", sans-serif;
-        color: rgb(72, 72, 72);
-        cursor: pointer;
-      }
-
-      a:hover {
-        color: #e94112;
-        transition: color 0.3s ease-in-out;
-        line-height: 1.5;
+        
+        .list:hover,
+        .list:hover {
+          transform: scale(1.05);
+        }
       }
     }
-  }
-
-  hr {
-    width: 99%;
-    margin-bottom: 12%;
-  }
-
-  .iconList {
-    @include flexCenter(row, left, null);
-    gap: 15px;
-    margin: 5px 18px;
+  
+    .title {
+      @include flexCenter (null, center, null);
+      font-size: 3rem;
+      font-weight: bolder;
+    }
+  
+    .boxPort1 {
+      @include flexCenter(column, flex-start, null);
+  
+      .list {
+        display: flex;
+        margin-bottom: 40px;
+  
+        p {
+          margin-left: 1rem;
+          font-family: "Roboto", sans-serif;
+          color: rgb(72, 72, 72);
+          margin: 0 1rem;
+        }
+  
+        a {
+          margin-left: 1rem;
+          font-family: "Roboto", sans-serif;
+          color: rgb(72, 72, 72);
+          cursor: pointer;
+        }
+  
+        a:hover {
+          color: #e94112;
+          transition: color 0.3s ease-in-out;
+          line-height: 1.5;
+        }
+      }
+    }
+  
+    .iconList {
+      @include flexCenter(null, left, null);
+      gap: 15px;
+      margin: 5px 18px;
+    }
   }
 }
+
+
 
 .Logo {
   @include flexCenter(row, center, center);
@@ -354,22 +369,39 @@ body {
 
 //----------------------------------- Media Queries -----------------------------------//
 
+@media only screen and (max-width: 1399px) {
+  body {
+    height: 1200px;
+  }
+
+  .gradient {
+
+    .section1 {
+      margin-bottom: 210px;
+    }
+  }
+}
+
 @media only screen and (max-width: 1200px) {
-  .infoProy {
-    flex-direction: column;
-    align-items: center;
+  .section2{
+
+    .infoProy {
+      flex-direction: column;
+      align-items: center;
+      .boxPort2 {
+        width: 100%;
+      }
+      .boxPort1 {
+        width: 100%;
+        .list {
+          margin-left: 100px;
+        }
+      }
+    }
   }
-  .boxPort2 {
-    margin-top: 10%;
-    width: 95%;
-  }
-  .boxPort1 {
-    margin-top: 15%;
-    width: 40%;
-  }
-  .ContainerSkills {
+  /* .ContainerSkills {
     min-width: 768px;
-  }
+  } */
 
   .GridSkills {
     width: 570px;
@@ -380,17 +412,55 @@ body {
   }
 }
 
+@media only screen and (max-width: 999px) {
+  body {
+    height: 1350px;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  body {
+    height: 1500px;
+  }
+
+  .gradient {
+    .section1 {
+      margin-bottom: 90px;
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
+
+  .gradient {
+    .section1 {
+      margin-bottom: 80px;
+      .ContainerPresentation {
+        
+        .PresentationName {
+          width: auto;
+          font-size: 55px;
+          height: 60px;
+        }
+        
+      }
+    }
+  }
+  .section2 {
+    width: 100vw;
+  }
   .ul1,
   .ul2 {
+    width: 95%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 40px ;
   }
 
   .infoProy > .boxPort2 > .ul1 > .list,
   .infoProy > .boxPort2 > .ul2 > .list {
-    margin-bottom: 10%;
+    margin-bottom: 25px;
   }
 
   .downloadCV {
@@ -410,18 +480,18 @@ body {
   }
 
   .ContainerPresentation p {
-    margin: 0 20%;
+    margin: 0 50px;
   }
 
   .GridSkills {
     width: 318px;
   }
 
-  .ContainerSkills {
+  /* .ContainerSkills {
     min-width: 318px;
-  }
+  } */
 
   body {
-    height: 914px ;
+    height: 630px ;
   }
 }
