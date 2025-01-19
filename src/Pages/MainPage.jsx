@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Styles/MainPage.scss";
 import IconWrapperSkills from "../Components/Icons/IconWrapperSkills";
 import IconWrapperCards from "../Components/Icons/IconWrapperCards";
-import RevealSkills from '../Components/ScrollReveal.jsx'
+import RevealSkills from "../Components/ScrollReveal.jsx";
 import IconInfo from "../Components/Icons/IconInfo";
 import MouseGradient from "../Components/MouseGradient.jsx";
 
@@ -29,8 +29,6 @@ import previewEnvioSeguro1 from "../assets/EnvíoSeguro1.jpeg";
 import previewEnvioSeguro2 from "../assets/EnvíoSeguro2.jpeg";
 
 function MainPage() {
-  
-
   const [downloadCV, setDownloadCV] = useState("Download");
 
   const urlFirebase =
@@ -67,7 +65,6 @@ function MainPage() {
       <MouseGradient />
       <div className="gradient">
         <section className="section1">
-
           <container className="ContainerPresentation">
             <p>Hi, I'm</p>
 
@@ -101,16 +98,15 @@ function MainPage() {
               </button>
             </div>
           </container>
-        <container className="ContainerSkills">
-          <div className="TextSkills">Skills</div>
-          <div className="GridSkills">
-            <RevealSkills />
-          </div>
-        </container>
+          <container className="ContainerSkills">
+            <div className="TextSkills">Skills</div>
+            <div className="GridSkills">
+              <RevealSkills />
+            </div>
+          </container>
         </section>
-        
-        <section className="section2">
 
+        <section className="section2">
           <container className="infoProy">
             <div className="boxPort2">
               <div className="title">Projects</div>
@@ -164,8 +160,8 @@ function MainPage() {
 
                   <p className="description">
                     Envíoseguro is a WhatsApp chatbot that promotes safety and
-                    management of purchases using payment gateways and methods to
-                    ensure the shipment of products.
+                    management of purchases using payment gateways and methods
+                    to ensure the shipment of products.
                   </p>
 
                   <div className="iconList">
@@ -183,13 +179,18 @@ function MainPage() {
                 <div className="list">
                   <div className="contPreview">
                     <div className="preview">
-                      <img src={previewSolanotes} alt="" className="image"></img>
+                      <img
+                        src={previewSolanotes}
+                        alt=""
+                        className="image"
+                      ></img>
                     </div>
                   </div>
 
                   <p className="description">
-                    Solanotes is a web application designed with user registration
-                    and powered with CRUD, using relational databases.
+                    Solanotes is a web application designed with user
+                    registration and powered with CRUD, using relational
+                    databases.
                   </p>
 
                   <div className="iconList">
@@ -218,10 +219,10 @@ function MainPage() {
                   </div>
 
                   <p className="description">
-                    IMGConverter is a SPA (Single Page Application). Using Google
-                    Vision API (Google Cloud Console) as an OCR tool, it processes
-                    text in images and finally creates an .xlsx file with the
-                    organized information.
+                    IMGConverter is a SPA (Single Page Application). Using
+                    Google Vision API (Google Cloud Console) as an OCR tool, it
+                    processes text in images and finally creates an .xlsx file
+                    with the organized information.
                   </p>
 
                   <div className="iconList">
@@ -247,9 +248,17 @@ function MainPage() {
                 <IoMdCall />
               </IconInfo>
 
-              <IconInfo label="solanomaciasmihael@gmail.com">
-                <MdAttachEmail />
-              </IconInfo>
+              <a
+                href="mailto:solanomaciasmihael@gmail.com?subject=Interesado/a%20en%20tus%20servicios%20profesionales&body=Hola%20Mihael,%0A%0AEstoy%20interesado/a%20en%20tus%20servicios%20profesionales%20y%20me%20gustaría%20explorar%20cómo%20podríamos%20colaborar.%20He%20revisado%20tu%20portafolio%20y%20estoy%20impresionado/a%20por%20tu%20trabajo.%0A%0APor%20favor,%20contáctame%20para%20discutir%20detalles.%0A%0A¡Espero%20tu%20respuesta!%0A%0ASaludos%20cordiales,%0A[Nombre%20del%20remitente]"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{color: "inherit" }}
+                className="mailto"
+              >
+                <IconInfo label="solanomaciasmihael@gmail.com">
+                  <MdAttachEmail />
+                </IconInfo>
+              </a>
 
               <IconContext.Provider value={{ size: 25 }}>
                 <div className="list" onClick={handleGit}>

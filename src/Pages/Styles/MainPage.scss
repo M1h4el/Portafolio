@@ -1,4 +1,3 @@
-
 $primary-color: rgba(255, 255, 255, 0.87);
 $secondary-color: rgb(119, 119, 119) 0%;
 $background-color: #071c39;
@@ -34,11 +33,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   transition: background 0.5s ease;
-
 }
 
 .gradient {
-
   width: 100vw;
   height: auto;
 
@@ -47,7 +44,7 @@ body {
     margin-top: 70px;
     margin-bottom: 150px;
     width: 100vw;
-    
+
     .ContainerPresentation {
       p {
         @include flexCenter(null, center, center);
@@ -56,7 +53,7 @@ body {
         z-index: 0;
         padding: 0;
       }
-    
+
       .PresentationName {
         @include flexCenter(null, center, center);
         font-size: $font-size-large;
@@ -68,25 +65,25 @@ body {
         animation: rainbow 10s linear infinite;
         animation-timing-function: ease;
       }
-    
+
       .ButtonDiv {
         @include flexCenter(null, center, null);
         gap: 8%;
         margin-top: 70px;
-    
+
         .downloadCV {
           @include flexCenter(null, center, center);
           gap: 14%;
           padding: 2%;
           width: 220px;
           height: 80px;
-    
+
           .selected {
             animation: slideIn 0.5s ease;
             animation: slideOut 0.5s ease;
             animation-delay: slideOut 0.3s;
           }
-    
+
           .downloadText {
             font-size: 1rem;
           }
@@ -95,8 +92,6 @@ body {
     }
   }
 }
-
-
 
 .firstHr {
   margin: $marginHr;
@@ -166,39 +161,37 @@ body {
     max-width: 1123px;
     width: 70%;
     height: 100%;
-    
+
     .reveal-container {
       @extend .GridSkills;
       width: 100%;
       opacity: 0;
       transform: translateY(100px);
       transition: opacity 0.5s ease, transform 0.5s ease;
-    
+
       &.visible {
         opacity: 1;
         transform: translateY(0);
       }
 
-    p {
-      font-family: "Roboto", sans-serif;
-      font-weight: 700;
-    }
-
-    .skillsContainer {
-      width: 140px;
-      padding: 0;
-      border-radius: 8px;
-      transform: scale(1);
-      transition: transform 0.5s ease;
-
-      &:hover {
-        transform: scale(1.2);
-        animation: skillZoom 0.5s ease forwards;
-      }
+      p {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
       }
 
-    }
+      .skillsContainer {
+        width: 140px;
+        padding: 0;
+        border-radius: 8px;
+        transform: scale(1);
+        transition: transform 0.5s ease;
 
+        &:hover {
+          transform: scale(1.2);
+          animation: skillZoom 0.5s ease forwards;
+        }
+      }
+    }
   }
 }
 
@@ -223,13 +216,13 @@ body {
       @include flexCenter(column, null, center);
       width: 70%;
       height: auto;
-  
+
       .ul1,
       .ul2 {
         @include flexCenter(null, space-evenly, null);
         margin-bottom: 80px;
         width: 95%;
-        
+
         .list {
           @include flexCenter(column, null, null);
           height: 465px;
@@ -238,33 +231,33 @@ body {
           border-radius: 8px;
           background-color: #1f1f1f;
           transition: transform 0.3s ease;
-  
+
           p {
             color: white;
             margin: 10px 20px;
             text-align: justify;
           }
-  
+
           .contPreview {
             @include flexCenter(null, center, center);
             border-radius: 10px;
             margin: 10px;
             height: 190px;
             background: rgb(70, 69, 69);
-  
+
             .preview {
               @include flexCenter(null, center, null);
               border-radius: 10px;
               margin: 10px;
               width: 92%;
               height: 100%;
-  
+
               .image {
                 width: 104%;
                 height: auto;
                 border-radius: 8px;
               }
-  
+
               .image2 {
                 height: 100%;
                 width: 33%;
@@ -273,49 +266,61 @@ body {
             }
           }
         }
-        
+
         .list:hover,
         .list:hover {
           transform: scale(1.05);
         }
       }
     }
-  
+
     .title {
-      @include flexCenter (null, center, null);
+      @include flexCenter(null, center, null);
       font-size: 3rem;
       font-weight: bolder;
     }
-  
+
     .boxPort1 {
       @include flexCenter(column, flex-start, null);
-  
+
+      .mailto {
+        &:hover {
+          color: #e94112;
+          transition: color 0.3s ease-in-out;
+          line-height: 1.5;
+        }
+      }
+
+      a {
+        padding: 0;
+        margin: 0;
+      }
+
       .list {
         display: flex;
         margin-bottom: 40px;
-  
+
         p {
           margin-left: 1rem;
           font-family: "Roboto", sans-serif;
           color: rgb(72, 72, 72);
           margin: 0 1rem;
         }
-  
+
         a {
           margin-left: 1rem;
           font-family: "Roboto", sans-serif;
           color: rgb(72, 72, 72);
           cursor: pointer;
-        }
-  
-        a:hover {
-          color: #e94112;
-          transition: color 0.3s ease-in-out;
-          line-height: 1.5;
+          &:hover {
+            color: #e94112;
+            transition: color 0.3s ease-in-out;
+            line-height: 1.5;
+          }
         }
       }
     }
-  
+
     .iconList {
       @include flexCenter(null, left, null);
       gap: 15px;
@@ -323,8 +328,6 @@ body {
     }
   }
 }
-
-
 
 .Logo {
   @include flexCenter(row, center, center);
@@ -344,7 +347,6 @@ body {
   }
 
   .gradient {
-
     .section1 {
       margin-bottom: 210px;
     }
@@ -352,8 +354,7 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
-  .section2{
-
+  .section2 {
     .infoProy {
       flex-direction: column;
       align-items: center;
@@ -400,18 +401,15 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-
   .gradient {
     .section1 {
       margin-bottom: 80px;
       .ContainerPresentation {
-        
         .PresentationName {
           width: auto;
           font-size: 55px;
           height: 60px;
         }
-        
       }
     }
   }
@@ -424,7 +422,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px ;
+    gap: 40px;
   }
 
   .infoProy > .boxPort2 > .ul1 > .list,
@@ -461,6 +459,6 @@ body {
   } */
 
   body {
-    height: 630px ;
+    height: 630px;
   }
 }
