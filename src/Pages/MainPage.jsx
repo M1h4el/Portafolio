@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Styles/MainPage.scss";
 import IconWrapperSkills from "../Components/Icons/IconWrapperSkills";
 import IconWrapperCards from "../Components/Icons/IconWrapperCards";
-import RevealSkills from "../Components/ScrollReveal.jsx";
+import SkillComponent from "../Components/SkillComponent";
 import IconInfo from "../Components/Icons/IconInfo";
 import MouseGradient from "../Components/MouseGradient.jsx";
 
@@ -27,8 +27,11 @@ import preview2wanted from "../assets/2wanted.png";
 import previewSolanotes from "../assets/Solanotes.png";
 import previewEnvioSeguro1 from "../assets/EnvíoSeguro1.jpeg";
 import previewEnvioSeguro2 from "../assets/EnvíoSeguro2.jpeg";
+import ScrollReveal from "../Components/ScrollReveal.jsx";
 
 function MainPage() {
+  
+
   const [downloadCV, setDownloadCV] = useState("Download");
 
   const urlFirebase =
@@ -65,6 +68,7 @@ function MainPage() {
       <MouseGradient />
       <div className="gradient">
         <section className="section1">
+
           <container className="ContainerPresentation">
             <p>Hi, I'm</p>
 
@@ -98,15 +102,16 @@ function MainPage() {
               </button>
             </div>
           </container>
-          <container className="ContainerSkills">
-            <div className="TextSkills">Skills</div>
-            <div className="GridSkills">
-              <RevealSkills />
-            </div>
-          </container>
+        <container className="ContainerSkills">
+          <div className="TextSkills">Skills</div>
+          <div className="GridSkills">
+            <ScrollReveal />
+          </div>
+        </container>
         </section>
-
+        
         <section className="section2">
+
           <container className="infoProy">
             <div className="boxPort2">
               <div className="title">Projects</div>
@@ -160,8 +165,8 @@ function MainPage() {
 
                   <p className="description">
                     Envíoseguro is a WhatsApp chatbot that promotes safety and
-                    management of purchases using payment gateways and methods
-                    to ensure the shipment of products.
+                    management of purchases using payment gateways and methods to
+                    ensure the shipment of products.
                   </p>
 
                   <div className="iconList">
@@ -179,18 +184,13 @@ function MainPage() {
                 <div className="list">
                   <div className="contPreview">
                     <div className="preview">
-                      <img
-                        src={previewSolanotes}
-                        alt=""
-                        className="image"
-                      ></img>
+                      <img src={previewSolanotes} alt="" className="image"></img>
                     </div>
                   </div>
 
                   <p className="description">
-                    Solanotes is a web application designed with user
-                    registration and powered with CRUD, using relational
-                    databases.
+                    Solanotes is a web application designed with user registration
+                    and powered with CRUD, using relational databases.
                   </p>
 
                   <div className="iconList">
@@ -219,10 +219,10 @@ function MainPage() {
                   </div>
 
                   <p className="description">
-                    IMGConverter is a SPA (Single Page Application). Using
-                    Google Vision API (Google Cloud Console) as an OCR tool, it
-                    processes text in images and finally creates an .xlsx file
-                    with the organized information.
+                    IMGConverter is a SPA (Single Page Application). Using Google
+                    Vision API (Google Cloud Console) as an OCR tool, it processes
+                    text in images and finally creates an .xlsx file with the
+                    organized information.
                   </p>
 
                   <div className="iconList">
@@ -248,22 +248,22 @@ function MainPage() {
                 <IoMdCall />
               </IconInfo>
 
-              <a
-                href="mailto:solanomaciasmihael@gmail.com?subject=Interesado/a%20en%20tus%20servicios%20profesionales&body=Hola%20Mihael,%0A%0AEstoy%20interesado/a%20en%20tus%20servicios%20profesionales%20y%20me%20gustaría%20explorar%20cómo%20podríamos%20colaborar.%20He%20revisado%20tu%20portafolio%20y%20estoy%20impresionado/a%20por%20tu%20trabajo.%0A%0APor%20favor,%20contáctame%20para%20discutir%20detalles.%0A%0A¡Espero%20tu%20respuesta!%0A%0ASaludos%20cordiales,%0A[Nombre%20del%20remitente]"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{color: "inherit" }}
-                className="mailto"
-              >
-                <IconInfo label="solanomaciasmihael@gmail.com">
+              <IconContext.Provider value={{ size: 25 }}>
+                <div className="list">
                   <MdAttachEmail />
-                </IconInfo>
-              </a>
+                  <a  href="https://mail.google.com/mail/?view=cm&fs=1&to=solanomaciasmihael@gmail.com&su=Interesado/a en tus servicios profesionales&body=Hola%20Miguel,%0A%0AEstoy%20interesado/a%20en%20tus%20servicios%20profesionales%20y%20me%20gustar%C3%ADa%20explorar%20c%C3%B3mo%20podr%C3%ADamos%20colaborar.%20He%20revisado%20tu%20portafolio%20y%20estoy%20impresionado/a%20por%20tu%20trabajo.%0A%0APor%20favor,%20cont%C3%A1ctame%20para%20discutir%20detalles%20sobre%20[proyecto/servicio%20espec%C3%ADfico,%20si%20aplica].%20Puedes%20escribirme%20a%20este%20correo%20o%20llamarme%20al%20[n%C3%BAmero%20de%20contacto,%20si%20es%20necesario].%0A%0A%C2%A1Espero%20tu%20respuesta!%0A%0ASaludos%20cordiales,%0A[Nombre%20del%20remitente]%0A[Posici%C3%B3n%20o%20empresa,%20si%20aplica]%0A[Datos%20de%20contacto%20adicionales,%20si%20aplica]"
+                      target="_blank"
+                      className="linkGit">solanomaciasmihael@gmail.com</a>
+                </div>
+              </IconContext.Provider>
 
               <IconContext.Provider value={{ size: 25 }}>
                 <div className="list" onClick={handleGit}>
                   <IoLogoGithub />
-                  <a className="linkGit">M1h4el</a>
+                  <a   
+                      className="linkGit">
+                    M1h4el
+                  </a>
                 </div>
               </IconContext.Provider>
             </div>
