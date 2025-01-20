@@ -336,7 +336,7 @@ body {
 
 @media only screen and (max-width: 1399px) {
   body {
-    height: 1200px;
+    height: 1260px;
   }
 
   .gradient {
@@ -347,6 +347,9 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
+  body {
+    height: 1530px;
+  }
   .section2 {
     .infoProy {
       flex-direction: column;
@@ -375,16 +378,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 999px) {
-  body {
-    height: 1350px;
-  }
-}
-
 @media only screen and (max-width: 799px) {
-  body {
-    height: 1500px;
-  }
 
   .gradient {
     .section1 {
@@ -408,6 +402,11 @@ body {
   }
   .section2 {
     width: 100vw;
+    .infoProy{
+      hr {
+        width: 100%;
+      }
+    }
   }
   .ul1,
   .ul2 {
@@ -435,8 +434,17 @@ body {
     align-items: center;
   }
 
-  .boxPort1 {
-    width: 75%;
+  .section2 {
+    .infoProy {
+      .boxPort1 {
+        width: 75%;
+        
+        .list {
+          margin-left: 0;
+        }
+      }
+      
+    }
   }
 
   .ContainerPresentation p {

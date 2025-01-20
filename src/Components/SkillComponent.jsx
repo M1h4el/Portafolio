@@ -14,7 +14,8 @@ import { SiNestjs } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
-
+import { FaSass } from 'react-icons/fa'
+import { FaDocker } from "react-icons/fa";
 
 function SkillComponent() {
 
@@ -33,15 +34,16 @@ function SkillComponent() {
     <>
         <SkillIcon icon={FaHtml5} label="HTML" color="#f06529" />
         <SkillIcon icon={IoLogoCss3} label="CSS" color="#2965f1" />
+        <SkillIcon icon={FaSass} label="Sass" color="#cc6699" />
         <SkillIcon icon={SiJavascript} label="JavaScript" color="#f0db4f" />
         <SkillIcon icon={SiTypescript} label="TypeScript" color="#1976D2" />
-        <SkillIcon icon={FaReact} label="React.Js" color="#61dafb" />
+        <SkillIcon icon={FaReact} label="React" color="#61dafb" />
         <SkillIcon icon={FaAngular} label="Angular" color="#FF5252" />
         <SkillIcon imgSrc={urlExpo} label="Expo" />
-        <SkillIcon icon={FaNode} label="Node.Js" color="#3c873a" />
+        <SkillIcon icon={FaNode} label="Node" color="#3c873a" />
         <SkillIcon icon={SiExpress} label="Express" color="#000000" />
         <SkillIcon icon={SiNestjs} label="Nest" color="#f01716" />
-        <SkillIcon icon={SiNextdotjs} label="Next.js" color="black" />
+        <SkillIcon icon={SiNextdotjs} label="Next" color="black" />
         <SkillIcon imgSrc={urlCsharp} label="C#" />
         <SkillIcon imgSrc={urlDotNet} label=".NET" />
         <SkillIcon imgSrc={urlSQLserver} label="SQL Server" />
@@ -49,6 +51,7 @@ function SkillComponent() {
         <SkillIcon icon={BiLogoPostgresql} label="PostgreSQL" color="#32648D" />
         <SkillIcon icon={BiLogoMongodb} label="MongoDB" color="#4DB33D" />
         <SkillIcon imgSrc={urlFirebase} label="Firebase" />
+        <SkillIcon icon={FaDocker} label="Docker" color="#0db7ed" />
         <SkillIcon icon={FaGithub} label="Github" color="black" />
     </>
   )

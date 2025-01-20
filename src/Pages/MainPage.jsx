@@ -1,12 +1,16 @@
 import { useState } from "react";
 import "./Styles/MainPage.scss";
+
+// import components
 import IconWrapperSkills from "../Components/Icons/IconWrapperSkills";
 import IconWrapperCards from "../Components/Icons/IconWrapperCards";
-import SkillComponent from "../Components/SkillComponent";
 import IconInfo from "../Components/Icons/IconInfo";
 import MouseGradient from "../Components/MouseGradient.jsx";
 
-// skillIcons
+// import hooks
+import useMeasureWindow from '../Components/Hooks/useMeasureWindow.jsx';
+
+// import skillIcons
 import { IconContext } from "react-icons";
 import { FaReact } from "react-icons/fa";
 import { FaNode } from "react-icons/fa";
@@ -15,13 +19,13 @@ import { BiLogoMongodb } from "react-icons/bi";
 import { GrContact } from "react-icons/gr";
 import { FaFileDownload } from "react-icons/fa";
 
-//import infoLogos
+// import infoLogos
 import { IoMdCall } from "react-icons/io";
 import { IoLogoGithub } from "react-icons/io";
 import { RiWhatsappLine } from "react-icons/ri";
 import { MdAttachEmail } from "react-icons/md";
 
-// import { useState } from "react";
+// import images
 import previewIMGConverter from "../assets/IMGConverter.png";
 import preview2wanted from "../assets/2wanted.png";
 import previewSolanotes from "../assets/Solanotes.png";
@@ -31,6 +35,7 @@ import ScrollReveal from "../Components/ScrollReveal.jsx";
 
 function MainPage() {
   
+  useMeasureWindow();
 
   const [downloadCV, setDownloadCV] = useState("Download");
 
@@ -69,7 +74,7 @@ function MainPage() {
       <div className="gradient">
         <section className="section1">
 
-          <container className="ContainerPresentation">
+          <div className="ContainerPresentation">
             <p>Hi, I'm</p>
 
             <div className="PresentationName">MIGUEL</div>
@@ -101,18 +106,18 @@ function MainPage() {
                 </IconWrapperSkills>
               </button>
             </div>
-          </container>
-        <container className="ContainerSkills">
+          </div>
+        <div className="ContainerSkills">
           <div className="TextSkills">Skills</div>
           <div className="GridSkills">
             <ScrollReveal />
           </div>
-        </container>
+        </div>
         </section>
         
         <section className="section2">
 
-          <container className="infoProy">
+          <div className="infoProy">
             <div className="boxPort2">
               <div className="title">Projects</div>
 
@@ -250,7 +255,7 @@ function MainPage() {
 
               <IconContext.Provider value={{ size: 25 }}>
                 <div className="list">
-                  <MdAttachEmail />
+                  <MdAttachEmail style={{minWidth: 25}} />
                   <a  href="https://mail.google.com/mail/?view=cm&fs=1&to=solanomaciasmihael@gmail.com&su=Interesado/a en tus servicios profesionales&body=Hola%20Miguel,%0A%0AEstoy%20interesado/a%20en%20tus%20servicios%20profesionales%20y%20me%20gustar%C3%ADa%20explorar%20c%C3%B3mo%20podr%C3%ADamos%20colaborar.%20He%20revisado%20tu%20portafolio%20y%20estoy%20impresionado/a%20por%20tu%20trabajo.%0A%0APor%20favor,%20cont%C3%A1ctame%20para%20discutir%20detalles%20sobre%20[proyecto/servicio%20espec%C3%ADfico,%20si%20aplica].%20Puedes%20escribirme%20a%20este%20correo%20o%20llamarme%20al%20[n%C3%BAmero%20de%20contacto,%20si%20es%20necesario].%0A%0A%C2%A1Espero%20tu%20respuesta!%0A%0ASaludos%20cordiales,%0A[Nombre%20del%20remitente]%0A[Posici%C3%B3n%20o%20empresa,%20si%20aplica]%0A[Datos%20de%20contacto%20adicionales,%20si%20aplica]"
                       target="_blank"
                       className="linkGit">solanomaciasmihael@gmail.com</a>
@@ -267,7 +272,7 @@ function MainPage() {
                 </div>
               </IconContext.Provider>
             </div>
-          </container>
+          </div>
         </section>
       </div>
     </>

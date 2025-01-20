@@ -7,10 +7,10 @@ const ScrollReveal = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(true); // Mostrar el componente después de 0.4 segundos
-    }, 400); // 400ms = 0.4s
+      setIsVisible(true);
+    }, 400);
 
-    return () => clearTimeout(timer); // Limpiar el temporizador si el componente se desmonta
+    return () => clearTimeout(timer);
   }, []);
 
   return (
